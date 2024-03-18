@@ -46,5 +46,6 @@ export class HeaderComponent {
 
   toPage(name: string) {
     document.getElementById(name)?.scrollIntoView();
+    this.menuClick()
   }
 }

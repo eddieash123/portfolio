@@ -1,0 +1,12 @@
+body{
+    height: 100%;
+}
+
+.contain{
+    height: 40vh;
+    background-color: var(--black);
+}
+
+.form{
+    background-color: var(--white);
+}
