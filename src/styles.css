@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    /* --black: #111111; */
+    --black: #000000;
+    --dark-gray: #1a1a1a;
+    --gray: #444444;
+    --light-gray: #999999;
+    --white: #eeeeee;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.link:hover{
+    text-decoration: none;
+    color: rgb(168, 168, 168);
+}

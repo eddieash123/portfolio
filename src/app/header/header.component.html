@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<header [class.header_change]="header_variable">
+    <div class="d-flex" style="justify-content: space-between; height: 80px;">
+        <div class="logo">
+            <p class="logo-link link" (click)="toPage('home')">Eddie Ashkenazi</p> 
+        </div>
+        <div class="menu">
+            <p class="menu-link link" (click)="toPage('about')">About</p>
+            <p class="menu-link link" (click)="toPage('services')">Services</p> 
+            <p class="menu-link link" (click)="toPage('projects')">Projects</p> 
+            <a class="menu-link link contact" href="/contact">Contact</a>
+        </div>
+        <div class="collapsable">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" 
+                class="bi bi-list" viewBox="0 0 16 16" (click)="menuClick()" style="cursor: pointer;">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </div>
+    </div>
+    <div class="menu-sub" [class.menu-sub-show]="!collapseVar">
+        <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('about')">About</p> 
+        <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('services')">Services</p>
+        <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('projects')">Projects</p>
+        <a class="menu-link link" [class.menu-link-change]="!collapseVar" href="/contact">Contact</a>
+    </div>
+</header>
+    
+
+<body>
+
+</body>
+</html>

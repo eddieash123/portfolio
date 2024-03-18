@@ -1,0 +1,301 @@
+body{
+    position: relative;
+    top: 30vh;
+    background-color: transparent;
+    width: 100%;
+}
+
+.about{
+    margin-top: 40vh;
+    padding: 100px 0;
+    border: 1px solid var(--white);
+    width: 100%;
+    height: 100%;
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 10px;
+    position: relative; /* must have position in order to use z-index */
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.about-text{
+    font-size: 1.5rem;
+    margin-right: 5rem;
+}
+
+.contain{
+    display: flex;
+    position: sticky;
+    background-color: transparent;
+    top: 30vh;
+    z-index: 1;
+    margin: 0 5rem;
+    color: var(--white);
+}
+
+.custom-space-between {
+    display: flex;
+    justify-content: space-around;
+    /* margin: 50px; */
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, .7); /* Adjust overlay color and opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text {
+    color: var(--white);
+    font-size: 3rem; /* Adjust font size */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* text-align: center; */
+}
+
+.overlay-description{
+    margin: 2rem;
+    margin-top: 10rem;
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+.project-container {
+    height: 100%;
+    background-image: url(/assets/background.jpg); /* Replace with the path to your image */
+    background-size: 120% 100%; /* Stretch the background image to cover width and auto for height */
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    padding-bottom: 10rem;
+  }
+
+.project-title{
+    padding: 4rem 0;
+}
+
+.project-container-2 {
+    /* border: 1px solid white; */
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 100%;
+  }
+
+.project-col{
+    border-radius: 20px;
+    width: 80%;
+    margin-left: 10%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.project-col img {
+    width:100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0;
+    /* border-radius: 20px; */
+}
+
+.project-col:hover .overlay{
+    opacity: 1;
+}
+
+.project-mobile{
+    display: none;
+}
+
+.proPic-container{
+    display: flex;
+}
+
+#profPic{
+    position: relative;
+    top: -3rem;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0;
+}
+
+#pairImg{
+    width: 100%;
+}
+
+.row{
+    text-align: center;
+}
+
+.services-contain{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.service {
+    width: 40%; /* Adjust the width as needed */
+    margin: 0; /* Reset margin to ensure even spacing */
+    padding: 20px; /* Add padding for a cleaner look */
+    text-align: justify;
+}
+
+.service h4{
+    /* font-size: 1.5rem; */
+    text-align: center;
+}
+
+.stack{
+    width: 100%;
+    /* margin-top: 4rem; */
+    position: relative;
+    top: -5rem;
+    font-size: 1.5rem;
+}
+
+.stack img{
+    width: 50px;
+    height: 50px;
+    margin: .5rem;
+}
+
+.stack-img-backround{
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.text{
+    /* margin: 0 12rem;  */
+    width: 80%;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 300%;
+    /* width: 100%; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Optionally set a maximum width */
+}
+
+  .carousel{
+    width: 80%;
+    height: 65%;
+  }
+
+
+@media (max-width: 1000px){
+
+    #profPic{
+        width: 250px;
+        height: 250px;
+        margin-left: 7px;
+    }
+
+    .project-container-2{
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    .project-col{
+        margin-bottom: 4rem;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .stack{
+        top: -.5rem;
+    }
+
+    .title{
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 750px){
+
+    .about{
+        margin-top: 6rem;
+        padding: 50px 0 50px 0;
+    }
+
+    .about-text{
+        margin: 0;
+        padding: 0 2rem;
+    }
+
+    .contain{
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        /* top: 35vh; */
+        top: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .overlay{
+        display: none;
+    }
+
+    .project-col{
+        width: 90%;
+        margin: 5%;
+    }
+
+    .project-mobile{
+        display: block;
+    }
+
+    .project-mobile p{
+        margin: 1rem 2rem;
+    }
+
+    .proPic-container{
+        flex-direction: column-reverse;
+    }
+
+    .services-contain{
+        display: block;
+    }
+
+    .service{
+        width: 100%;
+    }
+
+    .stack{
+        top: 2rem;
+    }
+
+    .text{
+        font-size: large;
+    }
+
+    .title{
+        font-size: 2rem;
+        align-self: center;
+        width: 100%;
+    }
+}
