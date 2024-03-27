@@ -8,6 +8,7 @@ body{
     display: flex;
     justify-content: space-between;
     bottom: 0;
+    font-family:'Nunito', 'Comfortaa', sans-serif;
 }
 
 .about{

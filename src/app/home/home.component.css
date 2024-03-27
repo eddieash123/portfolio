@@ -3,11 +3,12 @@ body{
     top: 30vh;
     background-color: transparent;
     width: 100%;
+    font-family:'Nunito', 'Comfortaa', sans-serif;
 }
 
 .about{
     margin-top: 40vh;
-    padding: 100px 0;
+    /* padding: 100px 0; */
     border: 1px solid var(--white);
     width: 100%;
     height: 100%;
@@ -23,6 +24,68 @@ body{
 .about-text{
     font-size: 1.5rem;
     margin-right: 5rem;
+}
+
+ .about-section{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10% 0 0 5%;
+    text-align: center;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 4;
+}
+
+.about-section-text{
+    width: 100%;
+    padding: 5%;
+    padding-left: 5%;
+    margin-left: 10%;
+    font-size: 100%;
+    background-color: var(--lightest-gray);
+    border-radius: 50px 0 0 50px;
+}
+
+.about-section-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about-nyit, .about-dtcc{
+    width: 100%;
+    height: 250px;
+}
+
+.about-dtcc{
+    background-color: rgba(14,84,71,255);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-nyit{
+    background-color: rgba(246,169,27,255);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-nyit img,
+.about-dtcc img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.about-nyit img{
+    border-radius: 25px;
 }
 
 .contain{
@@ -179,14 +242,6 @@ body{
     border-radius: 5px;
 }
 
-.text{
-    /* margin: 0 12rem;  */
-    width: 80%;
-    margin-top: 3rem;
-    text-align: center;
-    font-size: 1.5rem;
-}
-
 .title{
     font-weight: bold;
     font-size: 300%;
@@ -197,13 +252,31 @@ body{
     max-width: 100%; /* Optionally set a maximum width */
 }
 
-  .carousel{
-    width: 80%;
-    height: 65%;
-  }
+.whitebackground{
+    position: relative;
+    background-color: var(--white);
+    top: 50px;
+    z-index: 3;
+}
 
 
 @media (max-width: 1000px){
+
+    .about-nyit, .about-dtcc{
+        width: 100%;
+        height: 150px;
+    }
+
+    .about-nyit img,
+    .about-dtcc img {
+        max-width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .about-section{
+        font-size: 100%;
+    }
 
     #profPic{
         width: 250px;
@@ -241,6 +314,34 @@ body{
     .about-text{
         margin: 0;
         padding: 0 2rem;
+    }
+
+    .about-section{
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 5%;
+    }
+
+    .about-section-images{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 150px;
+    }
+
+    .about-section-text{
+        margin: 0;
+        border-radius: 50px;
+        margin-bottom: 5%;
+    }
+
+    .about-nyit, .about-dtcc{
+        width: 40vw;
+        height: 100%;
+    }
+
+    .about-nyit img, .about-dtcc img{
+        height: 100%;
+        object-fit: contain;
     }
 
     .contain{
