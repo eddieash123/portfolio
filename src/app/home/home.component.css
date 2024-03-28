@@ -284,6 +284,10 @@ body{
         margin-left: 7px;
     }
 
+    .project-container{
+        padding-bottom: 3rem;
+    }
+
     .project-container-2{
         grid-template-columns: repeat(1, 2fr);
     }
