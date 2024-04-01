@@ -6,6 +6,15 @@ body{
 .contain{
     height: 40vh;
     background-color: var(--black);
+    position: relative;
+}
+
+.contain h1{
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    font-size: 5rem;
+    color: var(--white);
 }
 
 .form{

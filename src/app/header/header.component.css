@@ -18,12 +18,12 @@ header{
     border: 1px solid rgb(166, 166, 166);
     border-radius: 2px;
     font-weight: 600 !important;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    transition: background-color 0.35s ease-in, color 0.35s ease-in;
 }
 
 .contact:hover{
     background-color: var(--white);
-    color: rgb(2, 30, 59);
+    color: var(--black);
     text-decoration: none;
 }
 
@@ -32,7 +32,7 @@ header{
 }
 
 .logo{
-    font-size: 30px;
+    font-size: 29px;
     margin-top: 23px;
     margin-left: 30px;
 }
@@ -41,6 +41,10 @@ header{
     display: flex;
     align-items: center;
     margin-right: 3rem;
+}
+
+.menu-contact-page{
+    margin-top: 2.4%;
 }
 
 .menu-link{
@@ -69,8 +73,7 @@ header{
     }
 
     .logo{
-        font-size: 25px;
-        align-self: center;
+        font-size: 29px;
     }
 
     .menu{

@@ -6,33 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<header [class.header_change]="header_variable">
-    <div class="d-flex" style="justify-content: space-between; height: 80px;">
-        <div class="logo">
-            <p class="logo-link link" (click)="toPage('home')">Eddie Ashkenazi</p> 
-        </div>
-        <div class="menu">
-            <p class="menu-link link" (click)="toPage('about')">About</p>
-            <p class="menu-link link" (click)="toPage('services')">Services</p> 
-            <p class="menu-link link" (click)="toPage('projects')">Projects</p> 
-            <!-- <a class="menu-link link contact" href="/contact">Contact</a> -->
-        </div>
-        <div class="collapsable">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" 
-                class="bi bi-list" viewBox="0 0 16 16" (click)="menuClick()" style="cursor: pointer;">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-            </svg>
+<header [class.header_change]="header_variable" class="d-flex" style="justify-content: space-between;">
+    <div *ngIf="isContactPage; else notContactPage" style="width: 100%">
+        <div class="d-flex" style="justify-content: space-between; height: 80px;">
+            <div class="logo">
+                <!-- <p class="logo-link link" (click)="toPage('home')">Eddie Ashkenazi</p>  -->
+                <a [routerLink]="['/home']" fragment="home" class="logo-link link">Eddie Ashkenazi</a>
+            </div>
+        
+            <div class="menu">
+                <a [routerLink]="['/home']" fragment="about" class="menu-link link">About</a>
+                <a [routerLink]="['/home']" fragment="services" class="menu-link link">Services</a>
+                <a [routerLink]="['/home']" fragment="projects" class="menu-link link">Projects</a>
+                <a class="menu-link link contact" href="/contact">Contact</a>
+            </div>
         </div>
     </div>
-    <div class="menu-sub" [class.menu-sub-show]="!collapseVar">
-        <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('about')">About</p> 
-        <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('services')">Services</p>
-        <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('projects')">Projects</p>
-        <!-- <a class="menu-link link" [class.menu-link-change]="!collapseVar" href="/contact">Contact</a> -->
-    </div>
-</header>
-    
+    <ng-template #notContactPage>
+        <div class="d-flex" style="justify-content: space-between; height: 80px; width: 100%;">
+            <div class="logo">
+                <p class="logo-link link" (click)="toPage('home')">Eddie Ashkenazi</p> 
+            </div>
+            <div class="menu">
+                <p class="menu-link link" (click)="toPage('about')">About</p>
+                <p class="menu-link link" (click)="toPage('services')">Services</p> 
+                <p class="menu-link link" (click)="toPage('projects')">Projects</p> 
+                <a class="menu-link link contact" href="/contact">Contact</a>
+            </div>
+        </div>
+    </ng-template>
 
+    <div class="collapsable">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" 
+            class="bi bi-list" viewBox="0 0 16 16" (click)="menuClick()" style="cursor: pointer;">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 
+            1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+    </div>
+    
+    <div class="menu-sub" [class.menu-sub-show]="!collapseVar">
+        <div *ngIf="isContactPage; else notContactPage2" class="menu-sub" [class.menu-sub-show]="!collapseVar">
+            <a [routerLink]="['/home']" fragment="about" class="menu-link link" [class.menu-link-change]="!collapseVar">About</a>
+            <a [routerLink]="['/home']" fragment="services" class="menu-link link" [class.menu-link-change]="!collapseVar">Services</a>
+            <a [routerLink]="['/home']" fragment="projects" class="menu-link link" [class.menu-link-change]="!collapseVar">Projects</a>
+            <a class="menu-link link" [class.menu-link-change]="!collapseVar" href="/contact">Contact</a>
+        </div>
+        
+        <ng-template #notContactPage2>
+            <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('about')">About</p> 
+            <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('services')">Services</p>
+            <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('projects')">Projects</p>
+            <a class="menu-link link" [class.menu-link-change]="!collapseVar" href="/contact">Contact</a>
+        </ng-template>
+    </div>
+
+    
+</header>
 <body>
 
 </body>

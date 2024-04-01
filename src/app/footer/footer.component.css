@@ -4,8 +4,7 @@ body{
     padding: 2rem;
     position: relative;
     z-index: 2;
-    background-color: var(--white);
-    display: flex;
+    background-color: white;
     justify-content: space-between;
     bottom: 0;
     font-family:'Nunito', 'Comfortaa', sans-serif;
@@ -19,6 +18,19 @@ body{
 
 .link{
     color: var(--dark-grey);
+}
+
+.personal{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100px;
+}
+
+.personal-links{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
 }
 
 @media (max-width: 1000px) {
