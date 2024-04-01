@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,13 @@ import { Component, HostListener } from '@angular/core';
 export class HeaderComponent {
   header_variable=false;
   collapseVar = true
+  isContactPage: boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
   
-  ngOnInit() { }
+  ngOnInit() { 
+    this.isContact();
+  }
   
   @HostListener("document:scroll") 
   scrollFunction() {
@@ -48,4 +52,18 @@ export class HeaderComponent {
     document.getElementById(name)?.scrollIntoView();
     this.menuClick()
   }
+
+  isContact(): boolean {
+
+    const currentUrl = this.router.url;
+
+    if (currentUrl === '/contact') {
+      this.isContactPage = true;
+    } else {
+      this.isContactPage = false;
+    }
+    
+    return this.isContactPage;
+  }
 }
+
