@@ -30,6 +30,7 @@ body{
     /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 10% 0 0 5%;
     text-align: center;
@@ -52,6 +53,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    height: 510px;
 }
 
 .about-nyit, .about-dtcc{
@@ -61,7 +63,7 @@ body{
 
 .about-dtcc{
     background-color: rgba(14,84,71,255);
-    border-radius: 25px;
+    border-radius: 25px 25px 50px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,11 +72,12 @@ body{
 
 .about-nyit{
     background-color: rgba(246,169,27,255);
-    border-radius: 25px;
+    border-radius: 50px 50px 25px 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-bottom: .8rem;
 }
 
 .about-nyit img,
@@ -267,6 +270,10 @@ body{
         height: 150px;
     }
 
+    .about-nyit{
+        margin-bottom: .5rem;
+    }
+
     .about-nyit img,
     .about-dtcc img {
         max-width: 100%;
@@ -276,6 +283,10 @@ body{
 
     .about-section{
         font-size: 100%;
+    }
+
+    .about-section-images{
+        height: 300px;
     }
 
     #profPic{
@@ -326,6 +337,7 @@ body{
         flex-direction: row;
         justify-content: space-around;
         height: 150px;
+        margin-bottom: 0;
     }
 
     .about-section-text{
@@ -337,6 +349,15 @@ body{
     .about-nyit, .about-dtcc{
         width: 40vw;
         height: 100%;
+    }
+
+    .about-dtcc{
+        border-radius:  25px 50px 50px 25px;
+        margin-left: .5rem;
+    }
+
+    .about-nyit{
+        border-radius:  50px 25px 25px 50px;
     }
 
     .about-nyit img, .about-dtcc img{
