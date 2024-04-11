@@ -45,3 +45,22 @@ body{
     margin: 1rem 0 2rem 0;
     padding: 0 3rem 0 3rem;
 }
+
+@media (max-width: 359px) {
+    .footer{
+        width: 250px;
+    }
+
+    .logo{
+        font-size: 28px;
+    }
+
+    .personal{
+        width: 250px;
+        font-size: 10px;
+    }
+
+    .personal-links{
+        width: 250px;
+    }
+}
