@@ -123,25 +123,22 @@ body{
 
 .overlay-text {
     color: var(--white);
-    font-size: 3rem; /* Adjust font size */
+    font-size: clamp(1rem, 2rem, 3rem);
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* text-align: center; */
 }
 
 .overlay-description{
     margin: 2rem;
     margin-top: 10rem;
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 1.4vw, 2rem);
     color: var(--white);
 }
 
 .project-container {
     height: 100%;
-    /* background-image: url('/assets/background.jpg');
-    background-size: 120% 100%; */
     position: relative;
     z-index: 2;
     color: var(--white);
@@ -157,7 +154,7 @@ body{
 .project-container-2 {
     /* border: 1px solid white; */
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     width: 100%;
   }
 
@@ -216,14 +213,31 @@ body{
 
 .service {
     width: 40%; /* Adjust the width as needed */
-    margin: 0; /* Reset margin to ensure even spacing */
+    margin: .2rem; /* Reset margin to ensure even spacing */
     padding: 20px; /* Add padding for a cleaner look */
     text-align: justify;
+    background-color: var(--white);
+}
+
+.services-section-text h2{
+    font-size: 2.5rem;
 }
 
 .service h4{
-    /* font-size: 1.5rem; */
+    font-size: 1.5rem;
     text-align: center;
+}
+
+.serv1{
+    border-radius: 50px 15px 15px 50px;
+}
+
+.serv2{
+    border-radius: 15px 15px 15px 15px;
+}
+
+.serv3{
+    border-radius: 15px 50px 50px 15px;
 }
 
 .stack{
@@ -405,6 +419,18 @@ body{
 
     .service{
         width: 100%;
+    }
+
+    .serv1{
+        border-radius: 50px 50px 15px 15px;
+    }
+    
+    .serv2{
+        border-radius: 15px 15px 15px 15px;
+    }
+    
+    .serv3{
+        border-radius: 15px 15px 50px 50px;
     }
 
     .stack{
