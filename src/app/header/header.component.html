@@ -17,7 +17,7 @@
                 <a [routerLink]="['/home']" fragment="about" class="menu-link link">About</a>
                 <a [routerLink]="['/home']" fragment="services" class="menu-link link">Services</a>
                 <a [routerLink]="['/home']" fragment="projects" class="menu-link link">Projects</a>
-                <a class="menu-link link contact" href="/contact">Contact</a>
+                <a class="menu-link link contact" href="/#/contact">Contact</a>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
                 <p class="menu-link link" (click)="toPage('about')">About</p>
                 <p class="menu-link link" (click)="toPage('services')">Services</p> 
                 <p class="menu-link link" (click)="toPage('projects')">Projects</p> 
-                <a class="menu-link link contact" href="/contact">Contact</a>
+                <a class="menu-link link contact" href="/#/contact">Contact</a>
             </div>
         </div>
     </ng-template>
@@ -48,14 +48,14 @@
             <a [routerLink]="['/home']" fragment="about" class="menu-link link" [class.menu-link-change]="!collapseVar">About</a>
             <a [routerLink]="['/home']" fragment="services" class="menu-link link" [class.menu-link-change]="!collapseVar">Services</a>
             <a [routerLink]="['/home']" fragment="projects" class="menu-link link" [class.menu-link-change]="!collapseVar">Projects</a>
-            <a class="menu-link link" [class.menu-link-change]="!collapseVar" href="/contact">Contact</a>
+            <a class="menu-link link" [class.menu-link-change]="!collapseVar" href="/#/contact">Contact</a>
         </div>
         
         <ng-template #notContactPage2>
             <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('about')">About</p> 
             <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('services')">Services</p>
             <p class="menu-link link" [class.menu-link-change]="!collapseVar" (click)="toPage('projects')">Projects</p>
-            <a class="menu-link link" [class.menu-link-change]="!collapseVar" href="/contact">Contact</a>
+            <a class="menu-link link" [class.menu-link-change]="!collapseVar" href="/#/contact">Contact</a>
         </ng-template>
     </div>
 
