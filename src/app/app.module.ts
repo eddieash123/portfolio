@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { AnimatedBackgroundComponent } from './animated-background/animated-background.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { TechSellComponent } from './tech-sell/tech-sell.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     AnimatedBackgroundComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    TechSellComponent
   ],
   imports: [
     BrowserModule,

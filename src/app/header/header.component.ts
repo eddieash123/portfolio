@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   header_variable=false;
   collapseVar = true
-  isContactPage: boolean = false;
+  isNotHomePage: boolean = false;
 
   constructor(private router: Router) { }
   
   ngOnInit() { 
-    this.isContact();
+    this.isNotHome();
   }
   
   @HostListener("document:scroll") 
@@ -53,16 +53,17 @@ export class HeaderComponent {
     this.menuClick()
   }
 
-  isContact(): boolean {
+  isNotHome(): boolean {
 
     const currentUrl = this.router.url;
 
-    if (currentUrl === '/contact') {
-      this.isContactPage = true;
+    if (!currentUrl.includes('/home')) {
+      this.isNotHomePage = true;
     } else {
-      this.isContactPage = false;
+      this.isNotHomePage = false;
     }
     
-    return this.isContactPage;
+    console.log(this.isNotHomePage)
+    return this.isNotHomePage;
   }
 }
