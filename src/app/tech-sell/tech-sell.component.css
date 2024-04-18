@@ -1,0 +1,46 @@
+body{
+    height: 100%;
+    font-family:'Nunito', 'Comfortaa', sans-serif;
+}
+
+.contain{
+    height: 40vh;
+    background-color: var(--black);
+    position: relative;
+}
+
+.contain h1{
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.content{
+    height: 100%;
+    background-color: var(--white);
+    padding: 3rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, auto);
+    width: 100%;
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--black);
+    border-radius: 15px;
+}
+
+.row{
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.text{
+    padding: 0 3rem;
+    font-size: 1.5rem;
+}
