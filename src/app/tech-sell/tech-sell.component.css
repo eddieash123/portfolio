@@ -44,3 +44,37 @@ body{
     padding: 0 3rem;
     font-size: 1.5rem;
 }
+
+
+@media (max-width: 1000px){
+    .row{
+        display: block;
+    }
+
+    .image{
+        max-width: 80%;
+    }
+
+    .col h3{
+        padding-top: 2rem;
+    }
+
+    .row2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contain h1{
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 750px){
+    .image{
+        max-width: 100%;
+    }
+
+    .contain h1{
+        font-size: 3rem;
+    }
+}
