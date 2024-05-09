@@ -3,6 +3,7 @@ body{
     font-family:'Nunito', 'Comfortaa', sans-serif;
 }
 
+
 .contain{
     height: 40vh;
     background-color: var(--black);
@@ -76,5 +77,18 @@ body{
 
     .contain h1{
         font-size: 3rem;
+        margin-left: 1.5rem;
+    }
+
+    .content{
+        padding: 0;
+    }
+
+    .imgCol{
+        padding: 0 3rem
+    }
+
+    .text{
+        padding: 0 1rem;
     }
 }
