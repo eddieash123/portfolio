@@ -132,7 +132,7 @@ body{
 
 .overlay-description{
     margin: 2rem;
-    margin-top: 10rem;
+    margin-top: 8rem;
     font-size: clamp(1.1rem, 1.4vw, 2rem);
     color: var(--white);
 }
